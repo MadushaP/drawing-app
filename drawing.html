@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Drawing Application</title>
+      <link href="app.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body class="bg" style='cursor:crosshair'>
+      <div id="toolbar">
+            <div id="rad">
+                  Size: <span id="radval" style='margin: 10'> 5 </span>
+                  <div id="decRad" class="radcontrol">-</div>
+                  <div id="incRad" class="radcontrol">+</div>
+                  <div id="smallSize" class="radcontrol">S</div>
+                  <div id="medSize" class="radcontrol">M</div>
+                  <div id="largeSize" class="radcontrol">L</div>
+
+            </div>
+            <div id="home" onclick="location.href='index.html';">Home</div>
+            <div id="clear">Clear</div>
+
+            <div id="colors">
+            </div>
+      </div>
+      <canvas id="canvas" style="display:block;">
+            Browser doesn't work.
+      </canvas>
+      <script src="drawJS.js"></script>
+      <script src="radius.js"></script>
+      <script src="colors.js"></script>
+</body>
