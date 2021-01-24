@@ -63,6 +63,7 @@ body {
     position: absolute;
 	right: 30px;
 	top: 17px;
+	z-index: -1;
 }
 
 .swatch {
