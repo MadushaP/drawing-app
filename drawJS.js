@@ -23,6 +23,8 @@ window.onresize = function () {
 
 
 var putPoint = function (e) {
+  e.clientX = e.clientX ?  e.clientX  :  e.touches[0].clientX
+  e.clientY = e.clientY ?  e.clientY :  e.touches[0].clientY
   if (drag) {
 
     context.lineTo(e.clientX, e.clientY);
@@ -47,6 +49,11 @@ var end = function () {
   drag = false;
   context.beginPath();
 }
+
+
+canvas.addEventListener('touchstart', start);
+canvas.addEventListener('touchmove', putPoint);
+canvas.addEventListener('touchend', end);
 
 
 canvas.addEventListener('mousedown', start);
